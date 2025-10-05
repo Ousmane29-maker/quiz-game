@@ -1,0 +1,153 @@
+{
+    "language": "en",
+    "topic": "web_programming",
+    "notes": "Questions on HTML, CSS, JavaScript and PHP. 'answer' is the zero-based index into the 'choices' array.",
+    "questions": [
+      {
+        "id": 1,
+        "topic": "HTML",
+        "difficulty": "easy",
+        "question": "Which HTML element is used to create a hyperlink?",
+        "choices": ["<link>", "<a>", "<href>", "<hyper>"],
+        "answer": 1
+      },
+      {
+        "id": 2,
+        "topic": "HTML",
+        "difficulty": "easy",
+        "question": "What attribute specifies the URL of an image in an <img> tag?",
+        "choices": ["src", "href"],
+        "answer": 0
+      },
+      {
+        "id": 3,
+        "topic": "CSS",
+        "difficulty": "easy",
+        "question": "Which CSS property controls the space between the content and the border of an element?",
+        "choices": ["margin", "padding", "gap", "border-spacing"],
+        "answer": 1
+      },
+      {
+        "id": 4,
+        "topic": "CSS",
+        "difficulty": "medium",
+        "question": "What does the CSS rule `box-sizing: border-box;` do?",
+        "choices": [
+          "Include padding and border in the element's total width and height",
+          "Make the element's box invisible",
+          "Disable margins for the element",
+          "Apply rounded corners"
+        ],
+        "answer": 0
+      },
+      {
+        "id": 5,
+        "topic": "JavaScript",
+        "difficulty": "easy",
+        "question": "Which keyword declares a block-scoped variable in modern JavaScript?",
+        "choices": ["var", "let", "const", "both let and const"],
+        "answer": 3
+      },
+      {
+        "id": 6,
+        "topic": "JavaScript",
+        "difficulty": "medium",
+        "question": "What does `event.preventDefault()` do when called inside an event handler?",
+        "choices": [
+          "Stops the event from bubbling",
+          "Prevents the browser's default action for the event",
+          "Removes the event listener",
+          "Cancels further handlers of the same event"
+        ],
+        "answer": 1
+      },
+      {
+        "id": 7,
+        "topic": "JavaScript",
+        "difficulty": "medium",
+        "question": "Which of these will correctly add an event listener to a button with id 'btn'?",
+        "choices": [
+          "document.getElementById('btn').on('click', handler);",
+          "document.querySelector('#btn').addEvent('click', handler);",
+          "document.getElementById('btn').addEventListener('click', handler);",
+          "document.btn.addEventListener('click', handler);"
+        ],
+        "answer": 2
+      },
+      {
+        "id": 8,
+        "topic": "PHP",
+        "difficulty": "easy",
+        "question": "Which superglobal array contains data sent by an HTML form with method='post'?",
+        "choices": ["$_GET", "$_POST", "$_REQUEST", "$_FORM"],
+        "answer": 1
+      },
+      {
+        "id": 9,
+        "topic": "PHP",
+        "difficulty": "medium",
+        "question": "What function should you use to safely output user input into HTML to prevent XSS?",
+        "choices": ["htmlentities()", "htmlspecialchars()", "strip_tags()", "escape_html()"],
+        "answer": 1
+      },
+      {
+        "id": 10,
+        "topic": "General Web",
+        "difficulty": "easy",
+        "question": "Which protocol ensures that data exchanged between browser and server is encrypted?",
+        "choices": ["HTTP", "FTP", "HTTPS", "SMTP"],
+        "answer": 2
+      },
+      {
+        "id": 11,
+        "topic": "General Web",
+        "difficulty": "medium",
+        "question": "Which HTTP method is typically used to update an existing resource in a RESTful API?",
+        "choices": ["GET", "POST", "PUT", "HEAD"],
+        "answer": 2
+      },
+      {
+        "id": 12,
+        "topic": "CSS",
+        "difficulty": "medium",
+        "question": "Which CSS unit is relative to the font-size of the root element (useful for responsive sizing)?",
+        "choices": ["px", "rem", "em", "%"],
+        "answer": 1
+      },
+      {
+        "id": 13,
+        "topic": "JavaScript",
+        "difficulty": "hard",
+        "question": "Which statement about JavaScript promises is true?",
+        "choices": [
+          "A pending promise can be directly converted to a value synchronously",
+          "Once settled, a promise's state cannot change",
+          "A promise can be resolved multiple times",
+          "Promises execute their callbacks immediately when created"
+        ],
+        "answer": 1
+      },
+      {
+        "id": 14,
+        "topic": "PHP",
+        "difficulty": "hard",
+        "question": "What is the safest way to store user passwords in a database?",
+        "choices": [
+          "Store them in plain text",
+          "Use MD5 hashing",
+          "Use a strong password hashing function like password_hash() with bcrypt/argon2",
+          "Encrypt them with a reversible cipher and store the key in the code"
+        ],
+        "answer": 2
+      },
+      {
+        "id": 15,
+        "topic": "HTML",
+        "difficulty": "medium",
+        "question": "Which attribute is required on a <form> element to allow file uploads?",
+        "choices": ["method='get'", "enctype='multipart/form-data'", "novalidate", "target='_blank'"],
+        "answer": 1
+      }
+    ]
+  }
+  
