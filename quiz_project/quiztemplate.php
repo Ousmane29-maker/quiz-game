@@ -16,7 +16,7 @@ include 'includes/init.php';
     <div class="container d-flex justify-content-center align-items-start py-5">
         <div class="card shadow p-4" style="max-width: 600px; width: 100%;">
             <h1 class="text-center mb-3">Welcome, <?= htmlspecialchars($_SESSION['user']) ?>!</h1>
-            <h2 class="h5 mb-3">Question <?= $currentPage + 1 ?></h2>
+            <h2 class="h5 mb-3">Question <?= $currentPage + 1 ?>/<?= $nb_questions ?></h2>
             <p class="mb-4"><?= htmlspecialchars($question['question']) ?></p>
 
             <form action="processAnswer.php" method="post">

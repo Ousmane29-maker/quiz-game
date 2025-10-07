@@ -10,16 +10,18 @@
                 $sum+=1;
             }
         }
-        // Calcul of the percentage
-        return ($sum / $nb_questions) * 100;
+        return $sum;
     }
+    $score = get_score($user_answers, $answers, $nb_questions);
 
-    $score =  round(get_score($user_answers, $answers, $nb_questions), 2);
+    $score_percent =  round(($score / $nb_questions) * 100, 2); //percentage 
     
+    $_SESSION['score'] = $score ;
+
     $file = 'data/scores.json';
 
     if (!is_writable(dirname($file))) {
-        die("❌ Folder not writable: " . dirname($file));
+        die(" Folder not writable: " . dirname($file));
     }
     
     if (file_exists($file)) {
@@ -33,7 +35,7 @@
     $found = false;
     foreach($scores as &$entry){
         if($entry['pseudo'] == $_SESSION['user']){ //pseudo already exists
-            $entry['score'] = round($score, 2);
+            $entry['score'] = round($score_percent, 2);
             $found = true;
         }
     }
@@ -42,13 +44,24 @@
     if(!$found){ // pseudo doesnt exist in scores.json
         $scores[] = [
             'pseudo' => $_SESSION['user'],
-            'score' => round($score, 2)
+            'score' => round($score_percent, 2)
         ];
     }
     
    
     file_put_contents($file, json_encode($scores, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     
+    if ($score_percent >= 80) {
+        $message = "Congratulations";
+        $color = "text-success";
+    } elseif ($score_percent >= 50) {
+        $message = "Not bad, you can improve!";
+        $color = "text-primary";
+    } else {
+        $message = "Don't worry, try again!";
+        $color = "text-danger";
+    }
+
 ?>
 
 
@@ -67,17 +80,15 @@
 
 <body class="bg-light d-flex justify-content-center align-items-center vh-100">
     <div class="card text-center shadow p-4" style="max-width: 500px; width: 100%;">
-        <h1 class="text-success mb-3">Results</h1>
-        <p class="fs-5 mb-1">🎉 Congratulations <strong><?= htmlspecialchars($_SESSION['user']); ?></strong>!</p>
-        <p class="fs-4 mb-4">Your final score is: <strong><?= round($score, 2) ?>%</strong></p>
+        <h1 class="<?= $color ?> mb-3"><?= $message ?></h1>
+        <p class="fs-5 mb-1">Your final score is: <strong><?= $score_percent ?>%</strong></p>
 
-        <div class="d-flex justify-content-around">
+        <div class="d-flex justify-content-around mt-3">
             <a href="review.php" class="btn btn-info text-white">Review</a>
             <a href="index.html" class="btn btn-primary">Quit</a>
             <a href="bestScores.php" class="btn btn-warning text-dark">Best Scores</a>
         </div>
     </div>
-
 </body>
 </html>
 
