@@ -1,18 +1,17 @@
 [
-    {
-        "pseudo": "Alice",
-        "score": 20
-    },
-    {
-        "pseudo": "Ousmane",
-        "score": 6.67
-    },
-    {
-        "pseudo": "Moussa",
-        "score": 0
-    },
-    {
-        "pseudo": "François",
-        "score": 26.67
-    }
+    { "pseudo": "Alice", "score": 20.00 },
+    { "pseudo": "Dex", "score": 6.67 },
+    { "pseudo": "Moussa", "score": 0.00 },
+    { "pseudo": "François", "score": 26.67 },
+    { "pseudo": "Fallou", "score": 6.67 },
+    { "pseudo": "Francis", "score": 13.33 },
+    { "pseudo": "Linux", "score": 66.67 },
+    { "pseudo": "Hello", "score": 20.00 },
+    { "pseudo": "Aminata", "score": 6.67 },
+    { "pseudo": "Alou", "score": 6.67 },
+    { "pseudo": "Love", "score": 13.33 },
+    { "pseudo": "me", "score": 33.33 },
+    { "pseudo": "felix", "score": 0.00 },
+    { "pseudo": "Felix", "score": 6.67 },
+    { "pseudo": "code", "score": 20.00 }
 ]

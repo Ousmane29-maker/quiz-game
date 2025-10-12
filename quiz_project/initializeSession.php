@@ -7,7 +7,7 @@ if (!isset($_POST['pseudo'])) {
 }
 
 if (!file_exists('data/questions.json')) {
-    die("⚠️ questions.json not found.");
+    die("questions.json not found.");
 }
 
 $json = file_get_contents('data/questions.json');

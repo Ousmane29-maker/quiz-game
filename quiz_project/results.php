@@ -85,7 +85,7 @@
 
         <div class="d-flex justify-content-around mt-3">
             <a href="review.php" class="btn btn-info text-white">Review</a>
-            <a href="index.html" class="btn btn-primary">Quit</a>
+            <a href="index.html" class="btn btn-secondary ">Quit</a>
             <a href="bestScores.php" class="btn btn-warning text-dark">Best Scores</a>
         </div>
     </div>

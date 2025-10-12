@@ -27,7 +27,7 @@ body {
 }
 
 .question-card:hover {
-    transform: translateY(-4px); /* effet de “carte qui flotte (4px vers le haut)” au survol */
+    transform: translateY(-4px); /* hover : translation 4px up  */
 }
 
 
@@ -40,4 +40,15 @@ body {
 .wrong {
     border: 2px solid #dc3545 !important;
     background-color: #f8d7da !important;
+}
+
+
+.badge {
+    padding: 0.4rem 0.8rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.bg-secondary {
+    background-color: #adb5bd !important;
 }
